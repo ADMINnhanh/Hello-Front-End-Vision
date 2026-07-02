@@ -92,7 +92,7 @@ function openCOCWallTool() {
                 <NInput v-model:value="config.text" clearable />
               </NInputGroup>
               <NInputGroup>
-                <NInputGroupLabel>文字大小</NInputGroupLabel>
+                <NInputGroupLabel>大小</NInputGroupLabel>
                 <NInputNumber
                   v-model:value="fontStyle.fontSize"
                   :min="9"
@@ -101,7 +101,7 @@ function openCOCWallTool() {
                 <NInputGroupLabel>px</NInputGroupLabel>
               </NInputGroup>
               <NInputGroup>
-                <NInputGroupLabel>文字粗细</NInputGroupLabel>
+                <NInputGroupLabel>粗细</NInputGroupLabel>
                 <NSelect
                   v-model:value="fontStyle.fontWeight"
                   :options="[
@@ -111,15 +111,15 @@ function openCOCWallTool() {
                 />
               </NInputGroup>
               <NInputGroup>
-                <NInputGroupLabel>文字字体</NInputGroupLabel>
+                <NInputGroupLabel>字体</NInputGroupLabel>
                 <NSelect
                   v-model:value="fontStyle.fontFamily"
                   :options="fontFamilyOptions"
                 />
+                <FontFamily v-model:fontFamilyOptions="fontFamilyOptions" />
               </NInputGroup>
-              <FontFamily v-model:fontFamilyOptions="fontFamilyOptions" />
               <NInputGroup>
-                <NInputGroupLabel>文字偏移</NInputGroupLabel>
+                <NInputGroupLabel>偏移</NInputGroupLabel>
                 <NInputNumber
                   v-model:value="config.textOffset.x"
                   :precision="0"
@@ -141,7 +141,7 @@ function openCOCWallTool() {
           <NCard title="网格" size="small">
             <div class="config-panel">
               <NInputGroup>
-                <NInputGroupLabel>网格行列数量</NInputGroupLabel>
+                <NInputGroupLabel>行列数量</NInputGroupLabel>
                 <NInputNumber
                   v-model:value="config.gridCount"
                   :min="1"
@@ -149,7 +149,7 @@ function openCOCWallTool() {
                 />
               </NInputGroup>
               <NInputGroup>
-                <NInputGroupLabel>字体颜色阈值比率</NInputGroupLabel>
+                <NInputGroupLabel>颜色阈值比率</NInputGroupLabel>
                 <NSlider
                   v-model:value="config.fontColorThresholdRatio"
                   :min="0.01"
@@ -159,7 +159,7 @@ function openCOCWallTool() {
               </NInputGroup>
 
               <NInputGroup>
-                <NInputGroupLabel>网格颜色统一化</NInputGroupLabel>
+                <NInputGroupLabel>颜色统一化</NInputGroupLabel>
                 <NSwitch v-model:value="config.uniformization" />
               </NInputGroup>
             </div>

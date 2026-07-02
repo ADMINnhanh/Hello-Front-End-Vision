@@ -58,7 +58,7 @@ watch(
   () => props.disabled,
   (disabled) => {
     if (disabled && isPlay.value) UpdatePlay();
-  },
+  }
 );
 
 onBeforeUnmount(() => {
@@ -75,6 +75,7 @@ onBeforeUnmount(() => {
       circle
       type="success"
       style="font-size: 24px"
+      title="动画提示"
       @click="Tips"
     >
       <SvgGather icon="Bulb" />
@@ -83,6 +84,7 @@ onBeforeUnmount(() => {
       quaternary
       circle
       style="font-size: 24px"
+      title="重置视图"
       @click="canvas?.returnToOrigin()"
     >
       <NIcon :component="RefreshCircleOutline" />
@@ -92,6 +94,7 @@ onBeforeUnmount(() => {
       circle
       :type="isPlay ? 'primary' : 'default'"
       style="font-size: 24px"
+      title="播放/暂停"
       @click="UpdatePlay()"
     >
       <NIcon :component="isPlay ? PauseCircleOutline : PlayCircleOutline" />
